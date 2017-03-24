@@ -10,3 +10,4 @@ project/target/streams/compile/incCompileSetup/
 target/streams/$global/assemblyOption/
 target/streams/test/test/
 target/
+/bin/
