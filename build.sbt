@@ -4,6 +4,8 @@ version := "1.0"
 
 scalaVersion := "2.11.8"
 
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0"
+
 libraryDependencies +="org.apache.spark" %% "spark-core" % "2.1.0"
 
 libraryDependencies +="com.vividsolutions" % "jts" % "1.13"
