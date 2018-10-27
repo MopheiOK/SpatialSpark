@@ -181,6 +181,7 @@ case class Point(x: Float, y: Float) extends Geom {
   }
 }
 
+// Box由左下和右上两个点定义
 case class Box(x: Float, y: Float, x2: Float, y2: Float) extends Geom {
   override def toBox: Box = this
 
