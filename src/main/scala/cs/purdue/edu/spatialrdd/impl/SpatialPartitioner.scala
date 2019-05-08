@@ -81,7 +81,7 @@ class QtreePartitioner[K: ClassTag, V: ClassTag](partitions: Int, fraction: Floa
       sampleData = rdd.map(_._1).sample(withReplacement = false, fraction = 0.2).collect()
     }
 
-    //整数除法：每个数据分片分配的抽样数据个数，即叶子节点的大小，是否每个数据分片都能够有数据
+    //整数除法：每个数据分片分配的抽样数据个数，即叶子节点的大小，叶子的大小决定了一个叶子节点能够存放的空间数据对象的个数，既控制了树的深度，也控制了每个数据分片上的数据量，是否每个数据分片都能够有数据
     var leafBound = sampleData.length / partitions
 
     if (leafBound == 0) {
